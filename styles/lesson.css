@@ -1,0 +1,504 @@
+/* Основные стили для body и сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #008b8b;
+    color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Стили для кнопки "Вернуться к урокам" */
+.return-to-lessons-btn {
+    display: block;
+    width: max-content;
+    padding: 10px 20px;
+    background-color: rgba(204, 146, 127, 0.95);
+    /* Полупрозрачный фон, адаптированный под градиент */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    align-self: flex-start;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.return-to-lessons-btn:hover {
+    background-color: rgba(252, 182, 159, 1);
+    /* Более насыщенный цвет при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    /* Небольшой эффект поднятия */
+}
+
+/* Основной контент страницы */
+main .container {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.lesson-content h2 {
+    color: #008b8b;
+    font-size: 24px;
+    margin-bottom: 5px;
+    line-height: 30px;
+}
+
+.lesson-info p,
+.lesson-materials ul,
+.homework p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Модальное окно с тестом */
+#startTestBtn {
+    padding: 10px 20px;
+    background-color: #008b8b;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#startTestBtn:hover {
+    background-color: #006161;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    /* Уменьшенная ширина модального окна */
+}
+
+.modal-content h3 {
+    font-size: 1.6em;
+    color: #5c3c2e;
+    /* Теплый коричневый цвет заголовка */
+    margin-bottom: 20px;
+}
+
+/* Скрыть оригинальные радио-кнопки */
+.option-input {
+    display: none;
+}
+
+/* Стили для лейбла, который будет визуально представлять радиокнопку */
+.option-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+}
+
+/* Стилизация кастомной радиокнопки */
+.option-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffecd2;
+    /* Цвет фона круга */
+    border: 2px solid #fcb69f;
+    /* Цвет рамки круга */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+    /* Плавное изменение цвета фона */
+}
+
+/* Стиль для внутреннего кружка, который показывает выбор */
+.option-label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    /* Сначала прозрачный */
+}
+
+/* Изменение фона внутреннего кружка при выборе радиокнопки */
+.option-input:checked+.option-label:after {
+    background-color: #fcb69f;
+    /* Цвет фона внутреннего кружка */
+}
+
+.option-input:checked+.option-label:before {
+    background-color: #fcb69f;
+    /* Цвет фона выбранной радиокнопки */
+}
+
+
+#nextQuestionBtn,
+.button-style {
+    padding: 10px 20px;
+    background-color: #fcb69f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    width: 100%;
+}
+
+#nextQuestionBtn:hover,
+.button-style:hover {
+    background-color: #e8a987;
+    transform: translateY(-2px);
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.error-modal {
+    display: none;
+    /* Скрыть модальное окно до его активации */
+    position: fixed;
+    /* Фиксированное позиционирование */
+    z-index: 2;
+    /* Z-index выше, чем у основного модального окна */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Если нужен скролл */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Полупрозрачный черный фон */
+}
+
+.error-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Или другая ширина, которая вам нужна */
+}
+
+.error-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.error-close:hover,
+.error-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стилизация сообщения об ошибке */
+#errorMessage {
+    color: #d8000c;
+    /* Красный цвет текста */
+    background-color: #ffbaba;
+    /* Легкий красный фон */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+/* Контейнер для контента и кнопки */
+.content-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.container.lesson-content {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Футер */
+footer {
+    background: linear-gradient(135deg, #111111, #333333);
+    color: white;
+    padding: 20px 0;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.footer-section>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+.about-contacts {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    max-width: 400px;
+}
+
+.about,
+.contacts {
+    margin-bottom: 15px;
+}
+
+.quick-links,
+.social-networks {
+    flex-basis: calc(50% - 30px);
+    max-width: 400px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    .container {
+        padding: 20px 40px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .quick-links,
+    .social-networks,
+    .about-contacts {
+        flex-basis: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li,
+    .footer-section {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 0;
+    }
+
+    .content-container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .return-to-lessons-btn {
+        width: auto;
+        margin: 20px 0;
+    }
+
+    .container.lesson-content {
+        margin-left: 0;
+    }
+}
+
+/* Адаптивность для планшетов и десктопов */
+@media (min-width: 768px) {
+
+    header .container,
+    footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .about-contacts {
+        flex-basis: 33.3333%;
+    }
+
+    .quick-links,
+    .social-networks {
+        flex-basis: 33.3333%;
+    }
+
+    .content-container {
+        flex-direction: row;
+    }
+
+    .return-to-lessons-btn {
+        margin: 20px 20px 20px 0;
+    }
+
+    .container.lesson-content {
+        margin-left: 20px;
+    }
+}
+
+/* ОБЩИЙ СКРОЛЛБАР */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fcb69f93;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #d1917f 0%, #c47c5a 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #c47c5a 0%, #d1917f 100%);
+}

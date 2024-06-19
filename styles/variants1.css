@@ -1,0 +1,210 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.containero {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-block {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* добавляет тень для 3D эффекта */
+    background-color: #fafafa; /* светлый фон для каждого вопроса */
+    padding: 15px; /* паддинг вокруг текста вопроса */
+    margin-bottom: 20px; /* отступ между блоками вопросов */
+}
+
+.question-block:last-child {
+    margin-bottom: 0; /* убирает отступ у последнего вопроса */
+}
+
+h3 {
+    color: #007BFF;
+}
+
+.question-block label {
+    display: inline-block;
+    margin-right: 10px; /* отступ справа от метки */
+    vertical-align: middle; /* выравнивание по вертикали */
+    width: auto; /* автоматическая ширина */
+}
+
+.question-block input[type='text'] {
+    display: inline-block;
+    vertical-align: middle; /* выравнивание по вертикали */
+    width: calc(100% - 160px); /* ширина поля уменьшена на ширину метки и отступ */
+    margin-top: 0; /* убираем верхний отступ */
+}
+
+input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.correct-answer {
+    background-color: #c8e6c9; /* Мягкий зеленый цвет */
+    color: black; /* Черный цвет текста */
+}
+
+.incorrect-answer {
+    background-color: #ffcdd2; 
+    color: black;
+}
+
+#resultsModal {
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 10% auto;
+}
+
+.modal-content {
+    max-height: 700px; /* Максимальная высота модального окна */
+    overflow-y: auto;  /* Включить вертикальный скроллбар при необходимости */
+    padding: 20px;     /* Отступы внутри модального окна для лучшей визуализации */
+}
+
+table {
+    width: 100%; /* Полная ширина контейнера */
+    border-collapse: collapse; /* Объединение границ для чистого вида */
+}
+
+th, td {
+    border-top: 1px solid #666; /* Граница только сверху каждой ячейки */
+    border-bottom: 1px solid #666; /* Граница только снизу каждой ячейки */
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 8px; /* Отступы внутри ячеек */
+}
+
+th {
+    background-color: #f2f2f2; /* Серый фон для заголовков */
+    border-top: none; /* Убираем границу сверху у первой строки, если необходимо */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px; /* Позиционирование в верхнем правом углу модального окна */
+    right: 10px;
+    font-size: 24px; /* Больший размер для лучшей видимости */
+    font-weight: bold; /* Жирный шрифт */
+    color: #555; /* Темно-серый цвет, который хорошо виден на светлом фоне */
+    cursor: pointer; /* Указывает, что элемент интерактивный */
+    padding: 10px; /* Достаточно места вокруг для легкого клика */
+    display: inline-block;
+    line-height: 1;
+}
+
+.close-button:hover {
+    color: #d9534f; /* Цвет при наведении - красный для выделения */
+    transform: rotate(90deg); /* Поворот на 90 градусов при наведении */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal {
+    position: fixed; /* Позиционирование относительно вьюпорта */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ширина на весь экран */
+    height: 100%; /* Высота на весь экран */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    display: none; /* Скрыто по умолчанию */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+}
+
+.close-self-check-button {
+    position: absolute;
+    top: 10px; /* Позиционирование в верхнем правом углу модального окна */
+    right: 10px;
+    font-size: 24px; /* Больший размер для лучшей видимости */
+    font-weight: bold; /* Жирный шрифт */
+    color: #555; /* Темно-серый цвет, который хорошо виден на светлом фоне */
+    cursor: pointer; /* Указывает, что элемент интерактивный */
+    padding: 10px; /* Достаточно места вокруг для легкого клика */
+    display: inline-block;
+    line-height: 1;
+}
+
+.close-self-check-button:hover {
+    color: #d9534f; /* Цвет при наведении - красный для выделения */
+    transform: rotate(90deg); /* Поворот на 90 градусов при наведении */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+#checkSelfButton {
+    display: block;
+    margin: 20px auto; /* Отступ сверху и снизу 20px, автоматический отступ по горизонтали для центрирования */
+    padding: 10px 20px; /* Внутренние отступы для удобства нажатия */
+    font-size: 16px; /* Размер шрифта кнопки */
+    cursor: pointer; /* Курсор в виде указателя, чтобы показать, что это кликабельный элемент */
+    background-color: #007BFF; /* Синий фон кнопки */
+    color: white; /* Белый текст */
+    border: none; /* Убрать рамку */
+    border-radius: 5px; /* Скругление углов кнопки */
+}
+
+#checkSelfButton:hover {
+    background-color: #0056b3; /* Темно-синий фон при наведении */
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верху */
+    gap: 10px; /* Интервал между изображениями */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto; /* Сохранение пропорций */
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.input-row input {
+    width: 48%;
+}

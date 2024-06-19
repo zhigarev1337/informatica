@@ -1,0 +1,244 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #e6f7ff; /* Добавил фон для визуального разделения */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    pointer-events: none;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    background-color: #008b8b;
+    color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Основное содержимое */
+main {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    min-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: transparent;
+    border: 2px solid #3498db; /* Цвет обводки */
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.grid-item a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #3498db; /* Цвет текста совпадает с цветом обводки */
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
+}
+
+.grid-item:hover {
+    background-color: #3498db; /* Фон при наведении */
+    transform: scale(1.05);
+}
+
+.grid-item:hover a {
+    color: #e6f7ff; /* Текст становится прозрачным при наведении */
+}
+
+/* Футер */
+footer {
+    background: linear-gradient(135deg, #111111, #333333);
+    color: #ffffff;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-section h3,
+.footer-section a,
+.footer-section p {
+    color: #ffffff;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+/* Адаптивные стили */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px 40px;
+    }
+
+    nav ul li {
+        margin: 0 25px;
+    }
+
+    .footer-section {
+        display: inline-block;
+        vertical-align: top;
+        width: 23%;
+        margin: 0 1%;
+        text-align: left;
+    }
+
+    .blog-post img {
+        height: 150px;
+    }
+
+    #teachersList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container,
+    .blog-posts {
+        padding: 10px;
+    }
+
+    .blog-post-title {
+        font-size: 18px;
+    }
+
+    .blog-post-description {
+        font-size: 14px;
+    }
+
+    #teachersList {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для блока с источником */
+.source-note {
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #e6f7ff; /* Светлый фон для блока */
+    text-align: center;
+    position: relative;
+}
+
+.source-note p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.source-note a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.source-note a:hover {
+    text-decoration: underline;
+}
+
+.source-note hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
