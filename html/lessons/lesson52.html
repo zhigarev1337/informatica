@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 4 | класс 11</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 4. Вспомогательные алгоритмы</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Понятие вспомогательных алгоритмов.</li>
+                        <li>Типы вспомогательных алгоритмов.</li>
+                        <li>Примеры вспомогательных алгоритмов.</li>
+                        <li>Использование вспомогательных алгоритмов в программировании.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Вспомогательный алгоритм</b> – это алгоритм, который используется в качестве компонента или подпрограммы в других алгоритмах для решения конкретных задач.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Вспомогательные алгоритмы играют важную роль в программировании, так как они позволяют разбивать сложные задачи на более простые подзадачи. Это делает код более понятным, модульным и повторно используемым.</p>
+                    <br>
+                    <h3>Типы вспомогательных алгоритмов</h3>
+                    <p>Существует несколько типов вспомогательных алгоритмов:</p>
+                    <ul>
+                        <li><b>Сортировка</b>: алгоритмы сортировки используются для упорядочивания элементов в массиве или списке. Примеры: сортировка пузырьком, быстрая сортировка, сортировка слиянием.</li>
+                        <li><b>Поиск</b>: алгоритмы поиска используются для нахождения элемента в массиве или списке. Примеры: линейный поиск, бинарный поиск.</li>
+                        <li><b>Управление данными</b>: алгоритмы для вставки, удаления и обновления данных. Примеры: вставка в список, удаление элемента из массива.</li>
+                    </ul>
+                    <br>
+                    <h3>Примеры вспомогательных алгоритмов</h3>
+                    <p>Рассмотрим несколько примеров вспомогательных алгоритмов:</p>
+                    <p><b>Пример 1:</b> Алгоритм сортировки пузырьком:</p>
+                    <pre><code>
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+                    </code></pre>
+                    <p><b>Пример 2:</b> Алгоритм бинарного поиска:</p>
+                    <pre><code>
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    mid = 0
+
+    while low <= high:
+        mid = (high + low) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
+                    </code></pre>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Вспомогательные алгоритмы являются важной частью программирования. Они помогают разбивать сложные задачи на более простые части, делая код более понятным и модульным. Понимание и умение использовать различные вспомогательные алгоритмы позволяет создавать эффективные и масштабируемые программы.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson52.js"></script>
+</body>
+
+</html>

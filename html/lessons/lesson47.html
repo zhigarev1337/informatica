@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 11 | класс 10</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 11. Кодирование текстовой информации</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Понятие кодирования текстовой информации.</li>
+                        <li>Основные методы кодирования текста.</li>
+                        <li>Кодировка ASCII и Unicode.</li>
+                        <li>Примеры кодирования текста.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Кодирование</b> – это процесс преобразования информации в форму, пригодную для хранения, передачи и обработки.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Кодирование текстовой информации играет важную роль в компьютерных системах. Оно позволяет представлять текст в виде, пригодном для хранения, передачи и обработки.</p>
+                    <br>
+                    <h3>Основные методы кодирования текста</h3>
+                    <p>Существует несколько основных методов кодирования текста:</p>
+                    <ul>
+                        <li><b>ASCII</b> (American Standard Code for Information Interchange): один из первых и наиболее распространенных стандартов кодирования текстовой информации. Он использует 7-битные или 8-битные коды для представления символов.</li>
+                        <li><b>Unicode</b>: современный стандарт кодирования, который охватывает практически все письменные системы мира. Он использует несколько кодировок, включая UTF-8, UTF-16 и UTF-32.</li>
+                    </ul>
+                    <br>
+                    <h3>Кодировка ASCII и Unicode</h3>
+                    <p>Кодировка ASCII была разработана в 1960-х годах и стала основой для многих других кодировок. Она использует 7 бит для представления символов, что позволяет закодировать 128 различных символов, включая буквы, цифры и специальные символы.</p>
+                    <p>Unicode был разработан для решения проблемы ограниченного количества символов в ASCII. Он предоставляет уникальные коды для каждого символа во всех письменных системах мира. UTF-8, UTF-16 и UTF-32 – это различные формы кодирования Unicode, которые используют разное количество байтов для представления символов.</p>
+                    <br>
+                    <h3>Примеры кодирования текста</h3>
+                    <p>Рассмотрим несколько примеров кодирования текста с использованием ASCII и Unicode:</p>
+                    <p><b>Пример 1:</b> Кодировка символа 'A' в ASCII:</p>
+                    <p>Десятичный код: 65</p>
+                    <p>Двоичный код: 01000001</p>
+                    <br>
+                    <p><b>Пример 2:</b> Кодировка символа 'A' в Unicode (UTF-8):</p>
+                    <p>Десятичный код: 65</p>
+                    <p>Двоичный код: 01000001</p>
+                    <br>
+                    <p><b>Пример 3:</b> Кодировка символа 'А' (кириллица) в Unicode (UTF-8):</p>
+                    <p>Десятичный код: 1040</p>
+                    <p>Двоичный код: 11000010 10100000</p>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Кодирование текстовой информации является важной частью работы с текстом в компьютерных системах. Понимание различных методов кодирования, таких как ASCII и Unicode, позволяет эффективно хранить, передавать и обрабатывать текстовую информацию.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson47.js"></script>
+</body>
+
+</html>

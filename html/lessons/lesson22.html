@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 10 | класс 8</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 10. Основные сведения о языке программирования Паскаль</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>История создания языка программирования Паскаль.</li>
+                        <li>Основные конструкции и синтаксис языка Паскаль.</li>
+                        <li>Примеры программ на языке Паскаль.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Паскаль</b> – это высокоуровневый язык программирования, разработанный в 1970 году Никлаусом Виртом.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Паскаль – это высокоуровневый язык программирования, разработанный в 1970 году швейцарским ученым Никлаусом Виртом. Он был создан для обучения программированию и структурированного программирования. Паскаль получил свое название в честь французского математика и философа Блеза Паскаля.</p>
+                    <br>
+                    <h3>Основные конструкции и синтаксис языка Паскаль</h3>
+                    <p>Язык Паскаль включает следующие основные конструкции:</p>
+                    <ul>
+                        <li><b>Программы</b>: каждая программа начинается с ключевого слова <code>program</code> и имени программы.</li>
+                        <li><b>Переменные</b>: объявление переменных осуществляется с использованием ключевого слова <code>var</code>.</li>
+                        <li><b>Типы данных</b>: Паскаль поддерживает несколько типов данных, включая целые числа (<code>integer</code>), вещественные числа (<code>real</code>), символы (<code>char</code>) и логические значения (<code>boolean</code>).</li>
+                        <li><b>Операторы</b>: основные операторы включают присваивание (<code>:=</code>), арифметические операции (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>), логические операции (<code>and</code>, <code>or</code>, <code>not</code>).</li>
+                        <li><b>Условные операторы</b>: используются для выполнения различных действий в зависимости от условий. Пример: <code>if...then...else</code>.</li>
+                        <li><b>Циклы</b>: Паскаль поддерживает несколько типов циклов, включая <code>for</code>, <code>while</code> и <code>repeat...until</code>.</li>
+                        <li><b>Процедуры и функции</b>: используются для организации кода и его повторного использования. Процедуры объявляются с использованием ключевого слова <code>procedure</code>, а функции – с использованием ключевого слова <code>function</code>.</li>
+                    </ul>
+                    <br>
+                    <h3>Примеры программ на языке Паскаль</h3>
+                    <h4>Пример 1: Программа для вычисления суммы двух чисел</h4>
+                    <pre><code>program Sum;
+var
+    a, b, sum: integer;
+begin
+    writeln('Введите два числа:');
+    readln(a, b);
+    sum := a + b;
+    writeln('Сумма: ', sum);
+end.</code></pre>
+                    <br>
+                    <h4>Пример 2: Программа для нахождения максимального из двух чисел</h4>
+                    <pre><code>program Max;
+var
+    a, b, max: integer;
+begin
+    writeln('Введите два числа:');
+    readln(a, b);
+    if a > b then
+        max := a
+    else
+        max := b;
+    writeln('Максимальное число: ', max);
+end.</code></pre>
+                    <br>
+                    <h4>Пример 3: Программа для вычисления факториала числа</h4>
+                    <pre><code>program Factorial;
+var
+    n, i, factorial: integer;
+begin
+    writeln('Введите число:');
+    readln(n);
+    factorial := 1;
+    for i := 1 to n do
+        factorial := factorial * i;
+    writeln('Факториал: ', factorial);
+end.</code></pre>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Язык программирования Паскаль является мощным инструментом для обучения основам программирования и структурированного подхода к разработке программ. Понимание основных конструкций и синтаксиса Паскаля позволяет создавать эффективные и читаемые программы.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson22.js"></script>
+</body>
+
+</html>

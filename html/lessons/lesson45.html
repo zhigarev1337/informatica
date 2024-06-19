@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 9 | класс 10</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 9. Преобразование логических выражений</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Основы преобразования логических выражений.</li>
+                        <li>Законы алгебры логики.</li>
+                        <li>Примеры преобразования логических выражений.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Логическое выражение</b> – это математическое выражение, состоящее из логических переменных и операций.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Преобразование логических выражений позволяет упростить их, сделать более понятными и оптимизировать выполнение логических операций.</p>
+                    <br>
+                    <h3>Законы алгебры логики</h3>
+                    <p>Основные законы алгебры логики включают:</p>
+                    <ul>
+                        <li><b>Закон тождества</b>: A AND 1 = A; A OR 0 = A.</li>
+                        <li><b>Закон нуля</b>: A AND 0 = 0; A OR 1 = 1.</li>
+                        <li><b>Закон двойного отрицания</b>: NOT (NOT A) = A.</li>
+                        <li><b>Закон коммутативности</b>: A AND B = B AND A; A OR B = B OR A.</li>
+                        <li><b>Закон ассоциативности</b>: (A AND B) AND C = A AND (B AND C); (A OR B) OR C = A OR (B OR C).</li>
+                        <li><b>Закон дистрибутивности</b>: A AND (B OR C) = (A AND B) OR (A AND C); A OR (B AND C) = (A OR B) AND (A OR C).</li>
+                        <li><b>Закон де Моргана</b>: NOT (A AND B) = NOT A OR NOT B; NOT (A OR B) = NOT A AND NOT B.</li>
+                    </ul>
+                    <br>
+                    <h3>Примеры преобразования логических выражений</h3>
+                    <p>Рассмотрим несколько примеров преобразования логических выражений:</p>
+                    <p><b>Пример 1:</b> Упростить выражение A AND (A OR B).</p>
+                    <p>Решение: A AND (A OR B) = A AND A OR A AND B = A OR (A AND B) = A (так как A OR (A AND B) = A).</p>
+                    <br>
+                    <p><b>Пример 2:</b> Упростить выражение NOT (A OR B).</p>
+                    <p>Решение: NOT (A OR B) = NOT A AND NOT B (по закону де Моргана).</p>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Преобразование логических выражений позволяет упростить и оптимизировать их выполнение. Знание законов алгебры логики помогает эффективно работать с логическими выражениями и улучшать производительность логических операций.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson45.js"></script>
+</body>
+
+</html>

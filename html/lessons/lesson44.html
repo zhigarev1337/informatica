@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 8 | класс 10</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 8. Алгебра логики. Таблица истинности</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Понятие алгебры логики.</li>
+                        <li>Основные логические операции.</li>
+                        <li>Таблица истинности.</li>
+                        <li>Примеры применения алгебры логики в информатике.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Алгебра логики</b> – это раздел математики, изучающий логические операции и их применение.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Алгебра логики, или булева алгебра, является основой для разработки цифровых схем и программного обеспечения. Она изучает логические операции и их применение для построения логических выражений и схем.</p>
+                    <br>
+                    <h3>Основные логические операции</h3>
+                    <p>Существуют три основных логических операции:</p>
+                    <ul>
+                        <li><b>Конъюнкция (AND)</b>: логическое умножение, результат истинный, если оба операнда истинные.</li>
+                        <li><b>Дизъюнкция (OR)</b>: логическое сложение, результат истинный, если хотя бы один операнд истинный.</li>
+                        <li><b>Отрицание (NOT)</b>: логическое отрицание, меняет значение операнда на противоположное.</li>
+                    </ul>
+                    <br>
+                    <h3>Таблица истинности</h3>
+                    <p>Таблица истинности используется для определения значений логических выражений при всех возможных комбинациях значений операндов. Пример таблицы истинности для операций AND, OR и NOT:</p>
+                    <table>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>A AND B</th>
+                            <th>A OR B</th>
+                            <th>NOT A</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h3>Примеры применения алгебры логики в информатике</h3>
+                    <p>Алгебра логики широко используется в информатике:</p>
+                    <ul>
+                        <li>Проектирование цифровых схем: логические операции используются для построения схем микропроцессоров и других цифровых устройств.</li>
+                        <li>Программирование: логические выражения используются в условиях и циклах для управления выполнением программ.</li>
+                        <li>Анализ и оптимизация алгоритмов: логические операции помогают анализировать и оптимизировать работу алгоритмов.</li>
+                    </ul>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Алгебра логики является фундаментальной частью математики и информатики. Понимание логических операций и таблиц истинности позволяет эффективно разрабатывать цифровые схемы и программное обеспечение.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</а></li>
+                    <ли><a href="../teachers.html">Преподаватели</a></ли>
+                    <ли><а href="../blog_news.html">Новости и блог</а></ли>
+                </ул>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson44.js"></script>
+</body>
+
+</html>

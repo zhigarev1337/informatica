@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 11 | класс 8</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 11. Запись линейных алгоритмов на языке программирования Паскаль</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Понятие линейных алгоритмов.</li>
+                        <li>Синтаксис записи линейных алгоритмов на языке Паскаль.</li>
+                        <li>Примеры программ с линейными алгоритмами.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Линейный алгоритм</b> – это алгоритм, в котором все команды выполняются последовательно, одна за другой.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Линейный алгоритм – это алгоритм, в котором все команды выполняются последовательно, одна за другой. Такие алгоритмы являются самыми простыми и понятными, так как их выполнение не зависит от условий или повторений.</p>
+                    <br>
+                    <h3>Синтаксис записи линейных алгоритмов на языке Паскаль</h3>
+                    <p>Для записи линейных алгоритмов на языке программирования Паскаль используются следующие основные конструкции:</p>
+                    <ul>
+                        <li><b>Объявление программы:</b> Каждая программа начинается с ключевого слова <code>program</code>, за которым следует имя программы.</li>
+                        <li><b>Объявление переменных:</b> Переменные объявляются с использованием ключевого слова <code>var</code>.</li>
+                        <li><b>Начало и конец программы:</b> Основная часть программы заключается между ключевыми словами <code>begin</code> и <code>end</code>.</li>
+                        <li><b>Операторы присваивания:</b> Значения переменных присваиваются с использованием оператора <code>:=</code>.</li>
+                        <li><b>Ввод и вывод данных:</b> Для ввода данных используется процедура <code>readln</code>, для вывода данных – процедура <code>writeln</code>.</li>
+                    </ul>
+                    <br>
+                    <h3>Примеры программ с линейными алгоритмами</h3>
+                    <h4>Пример 1: Программа для вычисления суммы двух чисел</h4>
+                    <pre><code>program Sum;
+var
+    a, b, sum: integer;
+begin
+    writeln('Введите два числа:');
+    readln(a, b);
+    sum := a + b;
+    writeln('Сумма: ', sum);
+end.</code></pre>
+                    <br>
+                    <h4>Пример 2: Программа для нахождения среднего арифметического двух чисел</h4>
+                    <pre><code>program Average;
+var
+    a, b: integer;
+    avg: real;
+begin
+    writeln('Введите два числа:');
+    readln(a, b);
+    avg := (a + b) / 2;
+    writeln('Среднее арифметическое: ', avg:0:2);
+end.</code></pre>
+                    <br>
+                    <h4>Пример 3: Программа для вычисления площади прямоугольника</h4>
+                    <pre><code>program RectangleArea;
+var
+    length, width, area: integer;
+begin
+    writeln('Введите длину и ширину прямоугольника:');
+    readln(length, width);
+    area := length * width;
+    writeln('Площадь прямоугольника: ', area);
+end.</code></pre>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Линейные алгоритмы являются основой для изучения программирования. Понимание их структуры и синтаксиса записи на языке Паскаль позволяет создавать простые и понятные программы, которые выполняются последовательно и без условий или циклов.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson23.js"></script>
+</body>
+
+</html>

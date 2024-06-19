@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 3 | класс 11</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 3. Запись алгоритмов на языках программирования</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Понятие языков программирования.</li>
+                        <li>Основные языки программирования.</li>
+                        <li>Синтаксис и семантика языков программирования.</li>
+                        <li>Примеры записи алгоритмов на разных языках.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Язык программирования</b> – это формальный язык, предназначенный для описания алгоритмов и структур данных, которые могут быть выполнены компьютером.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Языки программирования являются основным инструментом для записи алгоритмов и разработки программного обеспечения. Они позволяют описывать последовательность действий, которые должен выполнить компьютер для решения конкретной задачи.</p>
+                    <br>
+                    <h3>Основные языки программирования</h3>
+                    <p>Существует множество языков программирования, каждый из которых имеет свои особенности и области применения. Некоторые из наиболее распространенных языков включают:</p>
+                    <ul>
+                        <li><b>Python</b>: интерпретируемый язык программирования, известный своей простотой и читаемостью кода. Широко используется в науке о данных, веб-разработке и автоматизации.</li>
+                        <li><b>Java</b>: компилируемый язык программирования, известный своей портативностью и использованием в корпоративных приложениях и разработке Android.</li>
+                        <li><b>C++</b>: расширение языка C, известное своей эффективностью и использованием в системном программировании, разработке игр и высокопроизводительных приложениях.</li>
+                        <li><b>JavaScript</b>: интерпретируемый язык программирования, широко используемый в веб-разработке для создания интерактивных веб-страниц.</li>
+                    </ul>
+                    <br>
+                    <h3>Синтаксис и семантика языков программирования</h3>
+                    <p>Синтаксис языка программирования определяет правила написания кода, включая структуру операторов, выражений и блоков. Семантика описывает значение и поведение кода, объясняя, как интерпретировать и выполнять написанные команды.</p>
+                    <br>
+                    <h3>Примеры записи алгоритмов на разных языках</h3>
+                    <p>Рассмотрим несколько примеров записи простого алгоритма нахождения суммы двух чисел на разных языках программирования:</p>
+                    <p><b>Python:</b></p>
+                    <pre><code>
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+sum = a + b
+print("Сумма:", sum)
+                    </code></pre>
+                    <p><b>Java:</b></p>
+                    <pre><code>
+import java.util.Scanner;
+
+public class Sum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите первое число: ");
+        int a = scanner.nextInt();
+        System.out.print("Введите второе число: ");
+        int b = scanner.nextInt();
+        int sum = a + b;
+        System.out.println("Сумма: " + sum);
+    }
+}
+                    </code></pre>
+                    <p><b>C++:</b></p>
+                    <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a, b;
+    cout &lt;&lt; "Введите первое число: ";
+    cin &gt;&gt; a;
+    cout &lt;&lt; "Введите второе число: ";
+    cin &gt;&gt; b;
+    int sum = a + b;
+    cout &lt;&lt; "Сумма: " &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+}
+                    </code></pre>
+                    <p><b>JavaScript:</b></p>
+                    <pre><code>
+let a = parseInt(prompt("Введите первое число: "));
+let b = parseInt(prompt("Введите второе число: "));
+let sum = a + b;
+alert("Сумма: " + sum);
+                    </code></pre>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Языки программирования являются мощным инструментом для записи алгоритмов и создания программ. Понимание синтаксиса и семантики различных языков позволяет выбирать наиболее подходящий язык для конкретной задачи и эффективно разрабатывать программное обеспечение.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson51.js"></script>
+</body>
+
+</html>

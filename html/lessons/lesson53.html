@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 5 | класс 11</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 5. Массивы</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Понятие массивов.</li>
+                        <li>Типы массивов.</li>
+                        <li>Основные операции с массивами.</li>
+                        <li>Примеры работы с массивами.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Массив</b> – это структура данных, которая хранит набор элементов одного типа, упорядоченных по их индексам.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Массивы являются одной из основных структур данных в программировании. Они позволяют хранить набор элементов одного типа, доступ к которым осуществляется по их индексам.</p>
+                    <br>
+                    <h3>Типы массивов</h3>
+                    <p>Существует несколько типов массивов:</p>
+                    <ul>
+                        <li><b>Одномерные массивы</b>: массивы, элементы которых расположены в одномерной последовательности.</li>
+                        <li><b>Двумерные массивы</b>: массивы, элементы которых расположены в виде таблицы, имеющей строки и столбцы.</li>
+                        <li><b>Многомерные массивы</b>: массивы, элементы которых расположены в более чем двух измерениях.</li>
+                    </ul>
+                    <br>
+                    <h3>Основные операции с массивами</h3>
+                    <p>Основные операции, выполняемые с массивами, включают:</p>
+                    <ul>
+                        <li><b>Инициализация</b>: создание массива и задание его начальных значений.</li>
+                        <li><b>Обращение по индексу</b>: доступ к элементам массива с использованием их индексов.</li>
+                        <li><b>Изменение значений</b>: изменение значений элементов массива.</li>
+                        <li><b>Перебор элементов</b>: итерация по элементам массива с целью выполнения различных операций.</li>
+                    </ul>
+                    <br>
+                    <h3>Примеры работы с массивами</h3>
+                    <p>Рассмотрим несколько примеров работы с массивами на языке Python:</p>
+                    <p><b>Пример 1:</b> Инициализация и обращение к элементам одномерного массива:</p>
+                    <pre><code>
+arr = [1, 2, 3, 4, 5]
+print(arr[0])  # Вывод первого элемента
+print(arr[2])  # Вывод третьего элемента
+                    </code></pre>
+                    <p><b>Пример 2:</b> Инициализация и перебор элементов двумерного массива:</p>
+                    <pre><code>
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+    print()
+                    </code></pre>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Массивы являются важной структурой данных, которая позволяет эффективно хранить и управлять набором однотипных элементов. Понимание типов массивов и операций с ними является ключевым для разработки эффективных алгоритмов и программ.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></li>
+                    <li><a href="../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson53.js"></script>
+</body>
+
+</html>

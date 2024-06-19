@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 12 | класс 8</title>
+    <link rel="stylesheet" href="../../styles/lesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="../../index.html"><img src="../../images/general/logo.png" alt="Логотип"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../classes.html">Курсы</a></li>
+                    <li><a href="../teachers.html">Преподаватели</a></ли>
+                    <ли><а href="../blog_news.html">Новости и блог</а></ли>
+                </ул>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <a href="../classes.html" class="return-to-lessons-btn">Вернуться к урокам</a>
+        <main>
+            <h1>Урок 12. Запись ветвлений на языке Паскаль</h1>
+            <div class="container lesson-content">
+                <div class="lesson-info">
+                    <h2>Перечень рассматриваемых вопросов:</h2>
+                    <ul>
+                        <li>Понятие ветвлений в алгоритмах.</li>
+                        <li>Синтаксис записи ветвлений на языке Паскаль.</li>
+                        <li>Примеры программ с ветвлениями.</li>
+                    </ul>
+                    <h2>Тезаурус:</h2>
+                    <p><b>Ветвление</b> – это конструкция, которая позволяет выполнять разные действия в зависимости от выполнения условий.</p>
+                </div>
+                <div class="theoretical-material">
+                    <h2>Теоретический материал для самостоятельного изучения</h2>
+                    <p>Ветвление – это конструкция, которая позволяет выполнять разные действия в зависимости от выполнения условий. В языке Паскаль для записи ветвлений используются операторы <code>if...then...else</code> и <code>case</code>.</p>
+                    <br>
+                    <h3>Синтаксис записи ветвлений на языке Паскаль</h3>
+                    <p>Основные конструкции для записи ветвлений на языке Паскаль:</p>
+                    <ul>
+                        <li><b>Условный оператор if...then...else</b>: используется для выполнения одного действия, если условие истинно, и другого действия, если условие ложно.</li>
+                        <pre><code>if условие then
+    оператор1
+else
+    оператор2;</code></pre>
+                        <li><b>Оператор множественного выбора case</b>: используется для выполнения одного из нескольких действий в зависимости от значения выражения.</li>
+                        <pre><code>case выражение of
+    значение1: оператор1;
+    значение2: оператор2;
+    ...
+else
+    операторN;
+end;</code></pre>
+                    </ul>
+                    <br>
+                    <h3>Примеры программ с ветвлениями</h3>
+                    <h4>Пример 1: Программа для определения четности числа</h4>
+                    <pre><code>program EvenOdd;
+var
+    num: integer;
+begin
+    writeln('Введите число:');
+    readln(num);
+    if num mod 2 = 0 then
+        writeln('Число четное')
+    else
+        writeln('Число нечетное');
+end.</code></pre>
+                    <br>
+                    <h4>Пример 2: Программа для нахождения максимального из двух чисел</h4>
+                    <pre><code>program MaxOfTwo;
+var
+    a, b: integer;
+begin
+    writeln('Введите два числа:');
+    readln(a, b);
+    if a > b then
+        writeln('Максимальное число: ', a)
+    else
+        writeln('Максимальное число: ', b);
+end.</code></pre>
+                    <br>
+                    <h4>Пример 3: Программа для определения дня недели</h4>
+                    <pre><code>program DayOfWeek;
+var
+    day: integer;
+begin
+    writeln('Введите номер дня недели (1-7):');
+    readln(day);
+    case day of
+        1: writeln('Понедельник');
+        2: writeln('Вторник');
+        3: writeln('Среда');
+        4: writeln('Четверг');
+        5: writeln('Пятница');
+        6: writeln('Суббота');
+        7: writeln('Воскресенье');
+    else
+        writeln('Некорректный ввод');
+    end;
+end.</code></pre>
+                </div>
+                <div class="lesson-summary">
+                    <h2>Заключение</h2>
+                    <p>Ветвления являются важной частью программирования, позволяя создавать гибкие и адаптивные программы. Понимание и умение использовать конструкции ветвлений на языке Паскаль позволяет решать широкий спектр задач, требующих принятия решений в зависимости от различных условий.</p>
+
+                    <button id="startTestBtn">Проверить знания</button>
+
+                    <div id="testModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="errorMessage">Пожалуйста, выберите один из вариантов ответа.</p>
+                            <div id="question"></div>
+                            <div id="options"></div>
+                            <button id="nextQuestionBtn">Следующий вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section about-contacts">
+                <div class="about">
+                    <h3>О сайте</h3>
+                    <p>Этот сайт предоставляет образовательные курсы по информатике для школьников.</p>
+                </div>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p>Email: informatica711classes@gmail.com</p>
+                    <p>Телефон: +7 (916) 296-62-50</p>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></ли>
+                    <ли><а href="../classes.html">Курсы</а></ли>
+                    <ли><а href="../teachers.html">Преподаватели</а></ли>
+                    <ли><а href="../blog_news.html">Новости и блог</а></ли>
+                </ул>
+            </div>
+        </div>
+    </footer>
+    <script src="../../scripts/lessons/lesson24.js"></script>
+</body>
+
+</html>
