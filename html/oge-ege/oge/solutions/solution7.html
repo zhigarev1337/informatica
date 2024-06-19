@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение задания 7</title>
+    <link rel="stylesheet" href="../../../../styles/style.css">
+    <link rel="stylesheet" href="../../../../styles/solution.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="logo"><img src="../../../../images/general/logo.png" alt="Логотип"></div>
+                <nav>
+                    <ul>
+                        <li><a href="../../../../index.html">Главная</a></li>
+                        <li><a href="../../../classes.html">Курсы</a></li>
+                        <li><a href="../../../teachers.html">Преподаватели</a></li>
+                        <li><a href="../../../blog_news.html">Новости и блог</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="containero">
+                <h1>Решение задания 7</h1>
+                <h2>Вопрос</h2>
+                <p>Файл <b>rose.gif</b> был выложен в Интернете по адресу <i>http://color.net/red/rose.gif</i>. Потом его переместили в корневой каталог на сайте <b>box.net</b>, доступ к которому осуществляется по протоколу <b>ftp</b>. Имя файла не изменилось.<br>Фрагменты нового и старого адресов файла закодированы цифрами от 1 до 9. Запишите последовательность этих цифр, кодирующую адрес файла в сети Интернет после перемещения.<br>1) http:/<br>2) box<br>3) red<br>4) rose<br>5) .net<br>6) ftp:/<br>7) /<br>8).gif<br>9) color</p>
+                
+                <h2>Решение</h2>
+                <p>Для того чтобы определить последовательность цифр, представляющую новый адрес файла, нужно собрать адрес по частям:</p>
+                <ul>
+                    <li>Протокол FTP: <b>ftp:/</b> — цифра <b>6</b></li>
+                    <li>Доменное имя: <b>box</b> — цифра <b>2</b></li>
+                    <li>Корневая директория: <b>/</b> — цифра <b>7</b></li>
+                    <li>Домен верхнего уровня: <b>.net</b> — цифра <b>5</b></li>
+                    <li>Имя файла: <b>rose</b> — цифра <b>4</b></li>
+                    <li>Расширение файла: <b>.gif</b> — цифра <b>8</b></li>
+                </ul>
+                <p>Таким образом, последовательность цифр, кодирующая новый адрес файла, будет <b>6725748</b>.</p>
+                
+                <p>Ответ: <b>6725748</b></p>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p>© 2024 Школа информатики. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

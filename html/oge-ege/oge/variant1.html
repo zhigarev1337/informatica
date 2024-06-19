@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вариант 1</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+    <link rel="stylesheet" href="../../../styles/variants.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="../../../images/general/logo.png" alt="Логотип"></div>
+            <nav>
+                <ul>
+                    <li><a href="../../../index.html">Главная</a></li>
+                    <li><a href="../../classes.html">Курсы</a></li>
+                    <li><a href="../../teachers.html">Преподаватели</a></li>
+                    <li><a href="../../blog_news.html">Новости и блог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="containero" id="quiz-container">
+            <h1>Вариант 1</h1>
+            <!-- Вопросы будут вставлены здесь с помощью JavaScript -->
+        </div>
+
+        <!-- Модальное окно для результатов -->
+        <div id="resultsModal" style="display:none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1>Ваша оценка...</h1>
+                <p>Заданий с кратким ответом: 12, с развернутым ответом: 3. Максимальный балл: 12 + 7 = 19.</p>
+                <div id="resultsTable"></div>
+            </div>
+        </div>
+
+        <button id="checkSelfButton">Проверить задания</button>
+        <!-- Модальное окно для самопроверки -->
+        <div id="selfCheckModal" class="modal">
+            <div class="modal-content">
+                <span class="close-self-check-button" onclick="closeSelfCheckModal()">&times;</span>
+                <div id="selfCheckResultsTable">
+                    <!-- Динамическое содержимое будет вставлено здесь -->
+                </div>
+                <button onclick="checkAnswers()">Показать результаты</button>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2024 Школа информатики. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="../../../scripts/oge/1.js"></script>
+</body>
+
+</html>
